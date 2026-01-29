@@ -1,0 +1,3 @@
+/home/lenob0dy/projects/TermGL/build/CMakeFiles/TermGL.dir
+/home/lenob0dy/projects/TermGL/build/CMakeFiles/edit_cache.dir
+/home/lenob0dy/projects/TermGL/build/CMakeFiles/rebuild_cache.dir
