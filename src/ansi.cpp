@@ -38,7 +38,7 @@ void AnsiManager::resetBackgroundColor(std::ostream& stream) {
 }
 
 void AnsiManager::resetScreen(std::ostream& stream) {
-    stream << this->ClearScreenAndBuffer << this->ResetCursorTopRight;
+    stream /*<< this->ClearScreenAndBuffer*/ << this->ResetCursorTopRight;
     this->resetBackgroundColor(stream);
     this->resetForegroundColor(stream);
 }
