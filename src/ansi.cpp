@@ -28,7 +28,7 @@ void AnsiManager::setBackgroundColor(std::ostream& stream, RGB color)
 void AnsiManager::resetForegroundColor(std::ostream& stream) {
     RGB color = this->defaultForegroundColor;
     stream << "\x1b[38;2;" << int(color.R) << ';' << int(color.G) << ';' << int(color.B) << 'm';
-    this->backgroundColor = color;
+    this->foregroundColor = color;
 }
 
 void AnsiManager::resetBackgroundColor(std::ostream& stream) {

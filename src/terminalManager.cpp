@@ -21,3 +21,5 @@ void TerminalManager::getTerminalSize(int& width, int& height)
     height = ws.ws_row;
 #endif
 }
+
+
