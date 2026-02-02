@@ -7,8 +7,7 @@
 #include <chrono>
 #include <thread>
 
-int main() 
-{
+int main() {
     std::stringstream str;
     AnsiManager ansiManager(RGB { 255, 255, 255 }, RGB { 0, 0, 0 });
     TerminalManager termManager;
@@ -19,8 +18,7 @@ int main()
     const char * currChar = chars[0];
     int currInd = 0;
 
-    for (;;) 
-    {
+    for (;;) {
         str.str("");
         str.clear();
         ansiManager.resetScreen(str);
@@ -35,6 +33,4 @@ int main()
         currChar = chars[currInd];
         std::this_thread::sleep_for(std::chrono::milliseconds(34));
     }
-
-
 }

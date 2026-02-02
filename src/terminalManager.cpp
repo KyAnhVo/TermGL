@@ -7,8 +7,7 @@
     #include <unistd.h>
 #endif
 
-void TerminalManager::getTerminalSize(int& width, int& height)
-{
+void TerminalManager::getTerminalSize(int& width, int& height) {
 #ifdef _WIN32
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
@@ -20,6 +19,19 @@ void TerminalManager::getTerminalSize(int& width, int& height)
     width  = ws.ws_col;
     height = ws.ws_row;
 #endif
+    this->width = width;
+    this->height = height;
 }
 
 
+bool TerminalManager::drawTriangles(int index) {
+    // if VBO empty -> nothing to draw
+    if (this->VBOs[index].vertices.size() == 0) return false;
+
+    if (this->EBOs[index].vertexIndices.size() == 0) {
+        // use EBO to draw
+    } else {
+        // use VBO to draw
+    }
+    return true;
+}

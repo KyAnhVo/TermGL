@@ -4,11 +4,9 @@ AnsiManager::AnsiManager(RGB defaultForegroundColor, RGB defaultBackgroundColor)
     defaultForegroundColor(defaultForegroundColor),
     defaultBackgroundColor(defaultBackgroundColor),
     backgroundColor(RGB { 0, 0, 0 }),
-    foregroundColor(RGB { 255, 255, 255 })
-{ }
+    foregroundColor(RGB { 255, 255, 255 }) { }
 
-void AnsiManager::setForegroundColor(std::ostream& stream, RGB color)
-{
+void AnsiManager::setForegroundColor(std::ostream& stream, RGB color) {
     if (color == this->foregroundColor)
         return;
 
@@ -16,8 +14,7 @@ void AnsiManager::setForegroundColor(std::ostream& stream, RGB color)
     this->foregroundColor = color;
 }
 
-void AnsiManager::setBackgroundColor(std::ostream& stream, RGB color)
-{
+void AnsiManager::setBackgroundColor(std::ostream& stream, RGB color) {
     if (color == this->backgroundColor)
         return;
 

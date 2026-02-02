@@ -18,13 +18,19 @@ struct EBO {
     std::vector<int> vertexIndices;
 };
 
-class TerminalManager 
-{
+class TerminalManager {
     float* pixels;
+    int width, height;
     std::vector<VBO> VBOs;
     std::vector<EBO> EBOs;
+
 public:
-    void getTerminalSize(int&, int&);
+    void getTerminalSize(int& width, int& height);
+
+    /** Translate position [a, b] in [0, 1]x[0, 1] to
+     * pixel position [a', b'] in [0, width]x[0, height]
+     */
+    void posToPixel(float* posArr, int* pixelArr);
 
     /** Add a VBO and an EBO.
      *

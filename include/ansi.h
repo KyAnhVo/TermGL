@@ -4,8 +4,7 @@
 #include <cstdint>
 #include <ostream>
 
-struct RGB 
-{
+struct RGB {
     uint8_t R;
     uint8_t G;
     uint8_t B;
@@ -18,8 +17,7 @@ struct RGB
     }
 };
 
-class AnsiManager
-{
+class AnsiManager {
     // Ansi chars to delete things
     static inline constexpr const char* ClearScreenAndBuffer    = "\x1b[3J";
     static inline constexpr const char* ResetCursorTopRight     = "\x1b[H";
